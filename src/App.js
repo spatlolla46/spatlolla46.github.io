@@ -1,22 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import './App.css';
+import './School';
+import School from './School';
+
+function App(props) {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+       Welcome to {props.name}'s Page
+       <br/>
+        <div class="row" style={{fontSize:38}}>
+          Name: {props.name}<br/>
+          </div>
+          <School school="TexasA"></School>
+          Work: {props.work}<br/>
+
       </header>
     </div>
   );
